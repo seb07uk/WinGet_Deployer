@@ -22,10 +22,36 @@
             line-height: 1.6;
         }
 
+        /* Language Switcher Styling */
+        .lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--accent-green);
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--accent-green);
+            color: #000;
+        }
+
         header {
             padding: 60px 20px 40px;
             text-align: center;
             background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+            position: relative;
         }
 
         .logo {
@@ -56,7 +82,6 @@
             padding: 0 20px 40px;
         }
 
-        /* SCREENSHOT STYLING */
         .screenshot-container {
             margin: 40px auto;
             max-width: 900px;
@@ -183,23 +208,42 @@
             font-weight: bold;
         }
 
+        /* Nowa sekcja na grafikę */
+        .instruction-image {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #000;
+        }
+
+        .instruction-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .screenshot-container { width: 100%; }
+            .lang-switcher { top: 10px; right: 10px; }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <div class="lang-switcher">
+        <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">PL</button>
+    </div>
+    
     <span class="logo">polsoft.ITS™ LONDON</span>
-    <div class="badge">STABLE v2.1 REA-TIME ENGINE</div>
+    <div class="badge" data-i18n="badge">STABLE v2.1 REAL-TIME ENGINE</div>
     <h1>WinGet Deployer</h1>
-    <p class="tagline">Modernize your software deployment. A powerful, intuitive, and portable management suite for Windows.</p>
+    <p class="tagline" data-i18n="tagline">Modernize your software deployment. A powerful, intuitive, and portable management suite for Windows.</p>
     
     <a href="https://github.com/seb07uk/WinGet.Deployer/releases/download/IT.Administration.Tools.Productivity.Software.GUI.Front-end.Package.Managers.Deployment.Tools/WinGet.Deployer.2.1.exe" 
-       class="btn-download">
-       DOWNLOAD WINGET DEPLOYER 2.1
+       class="btn-download" data-i18n="downloadBtn">
+        DOWNLOAD WINGET DEPLOYER 2.1
     </a>
 
     <div class="screenshot-container">
@@ -215,29 +259,29 @@
 <div class="container">
     <div class="grid">
         <div class="card">
-            <h3>Visual Intelligence</h3>
+            <h3 data-i18n="f1_title">Visual Intelligence</h3>
             <ul class="feature-list">
-                <li><strong>Dynamic Highlighting:</strong> Instantly identify exact and related software matches.</li>
-                <li><strong>Smart Suggestions:</strong> Predictive Package ID entries for professional tools.</li>
-                <li><strong>Optimized UX:</strong> Clean transitions between Dark and Light visual modes.</li>
+                <li data-i18n="f1_1"><strong>Dynamic Highlighting:</strong> Instantly identify exact and related software matches.</li>
+                <li data-i18n="f1_2"><strong>Smart Suggestions:</strong> Predictive Package ID entries for professional tools.</li>
+                <li data-i18n="f1_3"><strong>Optimized UX:</strong> Clean transitions between Dark and Light visual modes.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Advanced Control</h3>
+            <h3 data-i18n="f2_title">Advanced Control</h3>
             <ul class="feature-list">
-                <li><strong>Batch Operations:</strong> Upgrade your entire software library with one click.</li>
-                <li><strong>Zero Noise:</strong> Background processes run silently using CREATE_NO_WINDOW.</li>
-                <li><strong>Source Audit:</strong> Real-time management of WinGet repositories and info.</li>
+                <li data-i18n="f2_1"><strong>Batch Operations:</strong> Upgrade your entire software library with one click.</li>
+                <li data-i18n="f2_2"><strong>Zero Noise:</strong> Background processes run silently using CREATE_NO_WINDOW.</li>
+                <li data-i18n="f2_3"><strong>Source Audit:</strong> Real-time management of WinGet repositories and info.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>ITS Architecture</h3>
+            <h3 data-i18n="f3_title">ITS Architecture</h3>
             <ul class="feature-list">
-                <li><strong>No Install Required:</strong> Fully portable EXE for administrative environments.</li>
-                <li><strong>Safe Storage:</strong> Configuration mapped to secure %userprofile% paths.</li>
-                <li><strong>Built-in Recovery:</strong> Dedicated engine repair and installation module.</li>
+                <li data-i18n="f3_1"><strong>No Install Required:</strong> Fully portable EXE for administrative environments.</li>
+                <li data-i18n="f3_2"><strong>Safe Storage:</strong> Configuration mapped to secure %userprofile% paths.</li>
+                <li data-i18n="f3_3"><strong>Built-in Recovery:</strong> Dedicated engine repair and installation module.</li>
             </ul>
         </div>
     </div>
@@ -255,6 +299,67 @@
     © 2026 polsoft.ITS™ London. All rights reserved.<br>
     Professional Software Management & Deployment Tools.
 </footer>
+
+<div class="instruction-image">
+    <img src="https://r.jina.ai/i/6f883713532c416187766f600f951f28" alt="nie usuwaj ani nie zmieniaj zadnej zawartosci">
+</div>
+
+<script>
+    const translations = {
+        en: {
+            badge: "STABLE v2.1 REAL-TIME ENGINE",
+            tagline: "Modernize your software deployment. A powerful, intuitive, and portable management suite for Windows.",
+            downloadBtn: "DOWNLOAD WINGET DEPLOYER 2.1",
+            f1_title: "Visual Intelligence",
+            f1_1: "<strong>Dynamic Highlighting:</strong> Instantly identify exact and related software matches.",
+            f1_2: "<strong>Smart Suggestions:</strong> Predictive Package ID entries for professional tools.",
+            f1_3: "<strong>Optimized UX:</strong> Clean transitions between Dark and Light visual modes.",
+            f2_title: "Advanced Control",
+            f2_1: "<strong>Batch Operations:</strong> Upgrade your entire software library with one click.",
+            f2_2: "<strong>Zero Noise:</strong> Background processes run silently using CREATE_NO_WINDOW.",
+            f2_3: "<strong>Source Audit:</strong> Real-time management of WinGet repositories and info.",
+            f3_title: "ITS Architecture",
+            f3_1: "<strong>No Install Required:</strong> Fully portable EXE for administrative environments.",
+            f3_2: "<strong>Safe Storage:</strong> Configuration mapped to secure %userprofile% paths.",
+            f3_3: "<strong>Built-in Recovery:</strong> Dedicated engine repair and installation module.",
+            footer: "© 2026 polsoft.ITS™ London. All rights reserved.<br>Professional Software Management & Deployment Tools.",
+            btnLabel: "PL"
+        },
+        pl: {
+            badge: "STABLE v2.1 SILNIK CZASU RZECZYWISTEGO",
+            tagline: "Zmodernizuj wdrażanie oprogramowania. Potężny, intuicyjny i przenośny pakiet zarządzający dla systemu Windows.",
+            downloadBtn: "POBIERZ WINGET DEPLOYER 2.1",
+            f1_title: "Wizualna Inteligencja",
+            f1_1: "<strong>Dynamiczne Wyróżnianie:</strong> Błyskawiczna identyfikacja dopasowań oprogramowania.",
+            f1_2: "<strong>Inteligentne Sugestie:</strong> Przewidywanie identyfikatorów pakietów dla profesjonalnych narzędzi.",
+            f1_3: "<strong>Zoptymalizowane UX:</strong> Płynne przejścia między trybem ciemnym i jasnym.",
+            f2_title: "Zaawansowana Kontrola",
+            f2_1: "<strong>Operacje Masowe:</strong> Zaktualizuj całą bibliotekę oprogramowania jednym kliknięciem.",
+            f2_2: "<strong>Brak Zakłóceń:</strong> Procesy w tle działają cicho dzięki CREATE_NO_WINDOW.",
+            f2_3: "<strong>Audyt Źródeł:</strong> Zarządzanie repozytoriami WinGet w czasie rzeczywistym.",
+            f3_title: "Architektura ITS",
+            f3_1: "<strong>Brak Instalacji:</strong> W pełni przenośny plik EXE dla środowisk administracyjnych.",
+            f3_2: "<strong>Bezpieczne Przechowywanie:</strong> Konfiguracja w bezpiecznej ścieżce %userprofile%.",
+            f3_3: "<strong>Wbudowane Odzyskiwanie:</strong> Dedykowany moduł naprawy i instalacji silnika.",
+            footer: "© 2026 polsoft.ITS™ London. Wszelkie prawa zastrzeżone.<br>Profesjonalne Narzędzia do Zarządzania i Wdrażania Oprogramowania.",
+            btnLabel: "EN"
+        }
+    };
+
+    let currentLang = 'en';
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'pl' : 'en';
+        document.documentElement.lang = currentLang;
+        
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.innerHTML = translations[currentLang][key];
+        });
+
+        document.getElementById('langBtn').innerText = translations[currentLang].btnLabel;
+    }
+</script>
 
 </body>
 </html>
