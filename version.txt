@@ -1,0 +1,28 @@
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(2, 1, 0, 0),
+    prodvers=(2, 1, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo(
+      [
+      StringTable(
+        u'044504b0',
+        [StringStruct(u'CompanyName', u'polsoft.ITS™ London'),
+        StringStruct(u'FileDescription', u'WinGet Deployer v2.1'),
+        StringStruct(u'FileVersion', u'2.1.0'),
+        StringStruct(u'InternalName', u'winget_deployer'),
+        StringStruct(u'LegalCopyright', u'©2026 Sebastian Januchowski. All rights reserved.'),
+        StringStruct(u'OriginalFilename', u'WinGetDeployer.exe'),
+        StringStruct(u'ProductName', u'WinGet Deployer'),
+        StringStruct(u'ProductVersion', u'2.1.0')])
+      ]), 
+    VarFileInfo([VarStruct(u'Translation', [1093, 1200])])
+  ]
+)
