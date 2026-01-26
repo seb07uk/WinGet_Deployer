@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=https://raw.githubusercontent.com/seb07uk/WinGet.Deployer/refs/heads/main/screenshot.png alt="WinGet Deployer v2.1" width="300"/>
+</p>
+
 # <h1 align="center">WinGet Deployer v2.1</h1>
 
 An advanced GUI-based package management utility designed for Windows, leveraging the power of the **Microsoft WinGet** engine. This tool provides a streamlined interface for IT professionals to search, install, upgrade, and manage system software with enhanced visual feedback.
