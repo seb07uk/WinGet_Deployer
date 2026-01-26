@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinGet Deployer v2.1 | polsoft.ITS™ London</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --accent-green: #40ff40;
+            --text-main: #ffffff;
+            --text-dim: #b0b0b0;
+            --border: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 60px 20px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--accent-green);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            color: var(--text-dim);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        /* SCREENSHOT STYLING */
+        .screenshot-container {
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 15px rgba(64, 255, 64, 0.1);
+            background: #1a1a1a;
+            position: relative;
+        }
+
+        .window-header {
+            background: #252525;
+            padding: 10px 15px;
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; background: #444; }
+
+        .app-screenshot {
+            display: block;
+            width: 100%;
+            height: auto;
+            filter: brightness(1.05);
+        }
+
+        .btn-download {
+            background-color: var(--accent-green);
+            color: #000;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 0 20px rgba(64, 255, 64, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(64, 255, 64, 0.4);
+            background-color: #5dff5d;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-green);
+            background-color: #1a1a1a;
+        }
+
+        .card h3 {
+            color: var(--accent-green);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+            color: #e0e0e0;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .spec-box {
+            background: #000;
+            padding: 25px;
+            border-radius: 5px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            color: #888;
+            border-left: 4px solid var(--accent-green);
+            margin-top: 60px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            background-color: #050505;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #1a1a1a;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .screenshot-container { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <span class="logo">polsoft.ITS™ LONDON</span>
+    <div class="badge">STABLE v2.1 REA-TIME ENGINE</div>
+    <h1>WinGet Deployer</h1>
+    <p class="tagline">Modernize your software deployment. A powerful, intuitive, and portable management suite for Windows.</p>
+    
+    <a href="https://github.com/seb07uk/WinGet.Deployer/releases/download/IT.Administration.Tools.Productivity.Software.GUI.Front-end.Package.Managers.Deployment.Tools/WinGet.Deployer.2.1.exe" 
+       class="btn-download">
+       DOWNLOAD WINGET DEPLOYER 2.1
+    </a>
+
+    <div class="screenshot-container">
+        <div class="window-header">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+        <img src="https://raw.githubusercontent.com/seb07uk/WinGet.Deployer/refs/heads/main/screenshot.png" 
+             alt="WinGet Deployer v2.1 Interface" 
+             class="app-screenshot">
+    </div>
+</header>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <h3>Visual Intelligence</h3>
+            <ul class="feature-list">
+                <li><strong>Dynamic Highlighting:</strong> Instantly identify exact and related software matches.</li>
+                <li><strong>Smart Suggestions:</strong> Predictive Package ID entries for professional tools.</li>
+                <li><strong>Optimized UX:</strong> Clean transitions between Dark and Light visual modes.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Advanced Control</h3>
+            <ul class="feature-list">
+                <li><strong>Batch Operations:</strong> Upgrade your entire software library with one click.</li>
+                <li><strong>Zero Noise:</strong> Background processes run silently using CREATE_NO_WINDOW.</li>
+                <li><strong>Source Audit:</strong> Real-time management of WinGet repositories and info.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>ITS Architecture</h3>
+            <ul class="feature-list">
+                <li><strong>No Install Required:</strong> Fully portable EXE for administrative environments.</li>
+                <li><strong>Safe Storage:</strong> Configuration mapped to secure %userprofile% paths.</li>
+                <li><strong>Built-in Recovery:</strong> Dedicated engine repair and installation module.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="spec-box">
+        // DEPLOYMENT SPECIFICATION // LONDON_UK<br>
+        [PLATFORM]: Windows 10/11 x64<br>
+        [ENGINE]: Microsoft.WinGet.Client v2.x<br>
+        [CONFIG_ROOT]: %userprofile%\.polsoft\WinGet\settings.json<br>
+        [TIMESTAMP]: 2026-01-26 // POLSOFT.ITS™
+    </div>
+</div>
+
+<footer>
+    © 2026 polsoft.ITS™ London. All rights reserved.<br>
+    Professional Software Management & Deployment Tools.
+</footer>
+
+</body>
+</html>
