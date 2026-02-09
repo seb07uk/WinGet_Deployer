@@ -1,6 +1,4 @@
-<p align="center">
-  <img src=https://raw.githubusercontent.com/seb07uk/WinGet.Deployer/refs/heads/main/screenshot.png alt="WinGet Deployer v2.1" width="300"/>
-</p>
+
 
 # <h1 align="center">WinGet Deployer v2.1</h1>
 
